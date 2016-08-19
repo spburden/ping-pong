@@ -1,0 +1,36 @@
+body {
+  background-color: #E6E6E6;
+}
+h1 {
+  font-size: 50px;
+  text-align: center;
+  padding: 50px;
+}
+.row {
+height: 100%;
+}
+.banner {
+  background-color: #F6DEB8;
+  height: 160px;
+  margin-top: -20px;
+}
+.sidebar {
+  background-color: #8CBC93;
+  padding-left: 35px;
+  height: 680px;
+}
+.content {
+  padding-top: 20px;
+  padding-left: 60px;
+}
+#result {
+  margin-left: -25px;
+}
+.content ol li {
+  padding-bottom: 5px;
+}
+.sidebar h4 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #EDD7AE;
+}

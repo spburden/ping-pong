@@ -33,7 +33,6 @@ $(function() {
    //alert(inputNumber);
    //console.log(pingPong(inputNumber));
    //console.log(outputs);
-
     pingPongList();
 
   });
