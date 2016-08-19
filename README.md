@@ -5,10 +5,21 @@
 #### By _**Stephen Burden**_
 
 ## Description
-_A web page which takes a number from a user and returns a range of numbers from 1 to the chosen number with some exceptions:
-* Numbers divisible by 3 are replaced with "ping"
-* Numbers divisible by 5 are replaced with "pong"
-* Numbers divisible by 15 are replaced with "ping-pong"
+_This website takes a number from a user and returns a list of numbers from 1 to the chosen number with some exceptions:_
+
+* _Numbers divisible by 3 are replaced with "ping"._
+    * _Example Input: 6_
+    * _Example Output: 1, 2, ping, 4, 5, ping_
+* _Numbers divisible by 5 are replaced with "pong"_
+    * _Example Input: 5_
+    * _Example Output: 1, 2, 3, 4, pong_
+* _Numbers divisible by 15 are replaced with "ping-pong"_
+    * _Example Input: 15_
+    * _Example Output: 1, 2, ping, 4, pong, ping, 7, 8, ping, pong, 11, ping, 13, 14, ping-pong_
+
+The final list output after each exception has been applied:
+* _Example Input: 15_
+* _Example Output: 1, 2, ping, 4, pong, ping, 7, 8, ping, pong, 11, ping, 13, 14, ping-pong_
 
 ## Setup/Installation Requirements
 * _Clone this repository to your desktop_
