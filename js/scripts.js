@@ -15,7 +15,6 @@ function pingPong(number) {
   };
   return outputs;
 };
-
 //USER INTERFACE LOGIC
 $(function() {
   $("form").submit(function(event) {
@@ -30,10 +29,6 @@ $(function() {
       };
     $("#result").slideDown();
     };
-   //alert(inputNumber);
-   //console.log(pingPong(inputNumber));
-   //console.log(outputs);
     pingPongList();
-
   });
 });

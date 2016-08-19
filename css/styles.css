@@ -6,9 +6,6 @@ h1 {
   text-align: center;
   padding: 50px;
 }
-.row {
-height: 100%;
-}
 .banner {
   background-color: #F6DEB8;
   height: 160px;
@@ -17,20 +14,29 @@ height: 100%;
 .sidebar {
   background-color: #8CBC93;
   padding-left: 35px;
-  height: 680px;
+  min-height: 680px;
+  overflow: hidden;
 }
 .content {
   padding-top: 20px;
   padding-left: 60px;
 }
-#result {
-  margin-left: -25px;
-}
-.content ol li {
-  padding-bottom: 5px;
-}
 .sidebar h4 {
   padding-top: 5px;
   padding-bottom: 5px;
   color: #EDD7AE;
+}
+.content ol li {
+  padding-bottom: 5px;
+}
+#result {
+  margin-left: -25px;
+}
+#left {
+  float: left;
+  height: 100%;
+}
+#right {
+  float: right;
+  height: 100%;
 }
