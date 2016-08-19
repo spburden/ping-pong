@@ -18,26 +18,23 @@ function pingPong(number) {
 
 //USER INTERFACE LOGIC
 $(function() {
- $("form").submit(function(event) {
- event.preventDefault();
- $("#result").hide();
- var inputNumber = parseInt($("input").val());
- // if(isNaN(inputNumber)) {
- //   $("#warning").show;
- // } else {
- //   pingPong(inputNumber).slidedown;
- // }
- //alert(inputNumber);
- //console.log(pingPong(inputNumber));
- //console.log(outputs);
- function pingPongList(){
-  pingPong(inputNumber);
-  $("#result").empty();
-  for (var i = 0; i < outputs.length; i++) {
-    $("#result").append("<li>" + outputs[i] + "</li>");
-   };
- };
-  pingPongList();
-  $("#result").slideDown();
+  $("form").submit(function(event) {
+    event.preventDefault();
+    $("#result").hide();
+    var inputNumber = parseInt($("input").val());
+    function pingPongList() {
+    pingPong(inputNumber);
+    $("#result").empty();
+    for (var i = 0; i < outputs.length; i++) {
+      $("#result").append("<li>" + outputs[i] + "</li>");
+      };
+    $("#result").slideDown();
+    };
+   //alert(inputNumber);
+   //console.log(pingPong(inputNumber));
+   //console.log(outputs);
+
+    pingPongList();
+
   });
 });
