@@ -28,11 +28,16 @@ $(function() {
  //   pingPong(inputNumber).slidedown;
  // }
  //alert(inputNumber);
- console.log(pingPong(inputNumber));
+ //console.log(pingPong(inputNumber));
  //console.log(outputs);
- for (var i = 0; i < outputs.length; i++) {
-   $("#result").append("<li>" + outputs[i] + "</li>");
- }
-$("#result").slideDown();
+ function pingPongList(){
+  pingPong(inputNumber);
+  $("#result").empty();
+  for (var i = 0; i < outputs.length; i++) {
+    $("#result").append("<li>" + outputs[i] + "</li>");
+   };
+ };
+  pingPongList();
+  $("#result").slideDown();
   });
 });
