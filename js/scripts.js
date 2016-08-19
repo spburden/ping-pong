@@ -1,6 +1,7 @@
 //BUSINESS LOGIC
+var outputs = [];
 function pingPong(number) {
-  var outputs = [];
+  outputs = [];
   for (var i = 1; i <= number; i++) {
     if(i%15 === 0) {
       outputs.push("ping-pong");
@@ -19,13 +20,19 @@ function pingPong(number) {
 $(function() {
  $("form").submit(function(event) {
  event.preventDefault();
+ $("#result").hide();
  var inputNumber = parseInt($("input").val());
  // if(isNaN(inputNumber)) {
  //   $("#warning").show;
  // } else {
  //   pingPong(inputNumber).slidedown;
  // }
- alert(inputNumber);
+ //alert(inputNumber);
  console.log(pingPong(inputNumber));
+ //console.log(outputs);
+ for (var i = 0; i < outputs.length; i++) {
+   $("#result").append("<li>" + outputs[i] + "</li>");
+ }
+$("#result").slideDown();
   });
 });
