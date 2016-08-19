@@ -6,6 +6,15 @@ h1 {
   text-align: center;
   padding: 50px;
 }
+.flexbox {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+.flexbox .col {
+  flex: 1;
+}
 .banner {
   background-color: #F6DEB8;
   height: 160px;
@@ -13,8 +22,8 @@ h1 {
 }
 .sidebar {
   background-color: #8CBC93;
-  padding-left: 35px;
-  min-height: 680px;
+  padding-left: 25px;
+  min-height: 100vh;
   overflow: hidden;
 }
 .content {
