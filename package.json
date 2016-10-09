@@ -1,0 +1,24 @@
+{
+  "name": "ping-pong",
+  "version": "1.0.0",
+  "description": "#### _A web page which takes a number from a user and returns a range of numbers from 1 to the chosen number with some exceptions, August 19, 2016_",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spburden/ping-pong.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spburden/ping-pong/issues"
+  },
+  "homepage": "https://github.com/spburden/ping-pong#readme",
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "gulp": "^3.9.1",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
