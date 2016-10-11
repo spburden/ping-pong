@@ -14,3 +14,7 @@ $(document).ready(function() {
     $("#result").slideDown();
   });
 });
+
+$(document).ready(function(){
+  $('#time').text(moment());
+});

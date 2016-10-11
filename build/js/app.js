@@ -1,1 +1,55 @@
-!function n(r,e,t){function u(i,p){if(!e[i]){if(!r[i]){var a="function"==typeof require&&require;if(!p&&a)return a(i,!0);if(o)return o(i,!0);var s=new Error("Cannot find module '"+i+"'");throw s.code="MODULE_NOT_FOUND",s}var f=e[i]={exports:{}};r[i][0].call(f.exports,function(n){var e=r[i][1][n];return u(e?e:n)},f,f.exports,n,r,e,t)}return e[i].exports}for(var o="function"==typeof require&&require,i=0;i<t.length;i++)u(t[i]);return u}({1:[function(n,r,e){function t(n){this.skin=n}t.prototype.pingPong=function(n){for(var r=[],e=1;e<=n;e++)e%15===0?r.push("ping-pong"):e%3===0?r.push("ping"):e%5===0?r.push("pong"):r.push(e);return r},e.calculatorModule=t},{}],2:[function(n,r,e){var t=n("./../js/pingpong.js").calculatorModule;$(document).ready(function(){$("form").submit(function(n){n.preventDefault(),$("#result").hide();var r=parseInt($("input").val()),e=new t("hot pink"),u=e.pingPong(r);$("#result").empty();for(var o=0;o<u.length;o++)$("#result").append("<li>"+u[o]+"</li>");$("#result").slideDown()})}),$(document).ready(function(){$("#signup").submit(function(n){n.preventDefault();var r=$("#email").val();$("#signup").hide(),$("#result").prepend("<p>Thank you, "+r+" has been added to our list!</p>")})})},{"./../js/pingpong.js":1}]},{},[2]);
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+function Calculator(skinName) {
+  this.skin = skinName;
+}
+
+Calculator.prototype.pingPong = function(number) {
+  var outputs = [];
+  for (var i = 1; i <= number; i++) {
+    if (i % 15 === 0) {
+      outputs.push("ping-pong");
+    } else if (i % 3 === 0) {
+      outputs.push("ping");
+    } else if (i % 5 === 0) {
+      outputs.push("pong");
+    } else {
+      outputs.push(i);
+    }
+  }
+  return outputs;
+};
+
+exports.calculatorModule = Calculator;
+
+},{}],2:[function(require,module,exports){
+var Calculator = require('./../js/pingpong.js').calculatorModule;
+
+$(document).ready(function() {
+  $("form").submit(function(event) {
+    event.preventDefault();
+    $("#result").hide();
+    var inputNumber = parseInt($("input").val());
+    var simpleCalculator = new Calculator("hot pink");
+    var outputs = simpleCalculator.pingPong(inputNumber);
+    $("#result").empty();
+    for (var i = 0; i < outputs.length; i++) {
+      $("#result").append("<li>" + outputs[i] + "</li>");
+      }
+    $("#result").slideDown();
+  });
+});
+
+$(document).ready(function(){
+  $('#time').text(moment());
+});
+
+$(document).ready(function(){
+  $('#signup').submit(function(event){
+    event.preventDefault();
+    var email = $('#email').val();
+    $('#signup').hide();
+    $('#result').prepend('<p>Thank you, ' + email + ' has been added to our list!</p>');
+  });
+});
+
+},{"./../js/pingpong.js":1}]},{},[2]);

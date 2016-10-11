@@ -1,7 +1,7 @@
 {
   "name": "ping-pong",
   "version": "1.0.0",
-  "description": "#### _A web page which takes a number from a user and returns a range of numbers from 1 to the chosen number with some exceptions, August 19, 2016_",
+  "description": "returns a range of numbers from 1 to the chosen number with some exceptions",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/spburden/ping-pong#readme",
   "devDependencies": {
+    "bower-files": "^3.14.1",
+    "browser-sync": "^2.17.2",
     "browserify": "^13.1.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
