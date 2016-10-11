@@ -22,6 +22,15 @@ Calculator.prototype.pingPong = function(number) {
 exports.calculatorModule = Calculator;
 
 },{}],2:[function(require,module,exports){
+Weather.prototype.getWeather = function(city) {
+  $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + apiKey).then(function(response) {
+    $('.showWeather').text("The humidity in " + city + " is " + response.main.humidity + "%");
+  }).fail(function(error) {
+    $('.showWeather').text(error.responseJSON.message);
+  });
+};
+
+},{}],3:[function(require,module,exports){
 var Calculator = require('./../js/pingpong.js').calculatorModule;
 
 $(document).ready(function() {
@@ -52,4 +61,17 @@ $(document).ready(function(){
   });
 });
 
-},{"./../js/pingpong.js":1}]},{},[2]);
+var Weather = require('./../js/weather.js').weatherModule;
+
+$(document).ready(function() {
+  var currentWeatherObject = new Weather();
+  $('#weatherLocation').click(function() {
+    var city = $('#location').val();
+    $('#location').val("");
+    var humidity = currentWeatherObject.getWeather(city);
+    $('.showWeather').text("The humidity in " + city + " is " + humidity + "%");
+    console.log(humidity);
+  });
+});
+
+},{"./../js/pingpong.js":1,"./../js/weather.js":2}]},{},[3]);
